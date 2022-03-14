@@ -83,6 +83,8 @@ tomcat:x:1000:1000::/home/tomcat:/bin/sh
 
 When your webshell is active, you can now use the interactive [console.py](console.py) to execute commands and download remote files.
 
+https://user-images.githubusercontent.com/79218792/158264654-df612180-9de5-4b5b-b3a2-ad22ae05b889.mp4
+
 ## Development
 
 If you need to compile this plugin, you can use the docker image provided in the [dev_env](./dev_env) folder. It recreates the [Joget Workflow Open Source](https://dev.joget.org/community/display/KBv6/Joget+Workflow+Open+Source) build environnement to build plugins.
