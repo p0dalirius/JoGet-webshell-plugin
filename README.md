@@ -95,7 +95,7 @@ Then if you need to test the plugin locally, you can start a JoGet instance with
 docker run -d -p 8000:8080 --rm docker.io/jogetworkflow/joget-community
 ```
 
-Don't forget to check `docker logs -f <container_id>` to see logs of the running JoGet instance. This is really useful for debugging, especially if you encounter a "[Missing requirement error while importing a plugin](./docs/Import-error.md)".
+Don't forget to check `docker logs -f <container_id>` to see logs of the running JoGet instance. This is really useful for debugging, especially if you encounter a "[Missing requirement error while importing a plugin](./docs/Missing-requirement-error-while-importing-a-plugin.md)".
 
 ## References
 
