@@ -30,7 +30,7 @@ public class WebShell extends ExtDefaultPlugin implements PluginWebSupport {
     }
 
     public String getVersion() {
-        return "1.2";
+        return "1.3";
     }
 
     public String getDescription() {
