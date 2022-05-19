@@ -5,6 +5,7 @@
   <br>
   <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/p0dalirius/JoGet-plugin-webshell">
   <a href="https://twitter.com/intent/follow?screen_name=podalirius_" title="Follow"><img src="https://img.shields.io/twitter/follow/podalirius_?label=Podalirius&style=social"></a>
+  <a href="https://www.youtube.com/c/Podalirius_?sub_confirmation=1" title="Subscribe"><img alt="YouTube Channel Subscribers" src="https://img.shields.io/youtube/channel/subscribers/UCF_x5O7CSfr82AfNVTKOv_A?style=social"></a>
   <br>
 </p>
 
@@ -83,6 +84,8 @@ tomcat:x:1000:1000::/home/tomcat:/bin/sh
 
 When your webshell is active, you can now use the interactive [console.py](console.py) to execute commands and download remote files.
 
+https://user-images.githubusercontent.com/79218792/158264654-df612180-9de5-4b5b-b3a2-ad22ae05b889.mp4
+
 ## Development
 
 If you need to compile this plugin, you can use the docker image provided in the [dev_env](./dev_env) folder. It recreates the [Joget Workflow Open Source](https://dev.joget.org/community/display/KBv6/Joget+Workflow+Open+Source) build environnement to build plugins.
@@ -93,7 +96,7 @@ Then if you need to test the plugin locally, you can start a JoGet instance with
 docker run -d -p 8000:8080 --rm docker.io/jogetworkflow/joget-community
 ```
 
-Don't forget to check `docker logs -f <container_id>` to see logs of the running JoGet instance. This is really useful for debugging, especially if you encounter a "[Missing requirement error while importing a plugin](./docs/Import-error.md)".
+Don't forget to check `docker logs -f <container_id>` to see logs of the running JoGet instance. This is really useful for debugging, especially if you encounter a "[Missing requirement error while importing a plugin](./docs/Missing-requirement-error-while-importing-a-plugin.md)".
 
 ## References
 

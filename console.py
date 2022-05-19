@@ -37,7 +37,7 @@ readline.set_completer_delims('\n')
 
 
 def parseArgs():
-    parser = argparse.ArgumentParser(description="Description message")
+    parser = argparse.ArgumentParser(description="Interactive console for LimeSurvey webshell plugin")
     parser.add_argument("-t", "--target", default=None, required=True, help='JoGet target instance')
     parser.add_argument("-k", "--insecure", dest="insecure_tls", action="store_true", default=False, help="Allow insecure server connections when using SSL (default: False)")
     parser.add_argument("-v", "--verbose", default=False, action="store_true", help='Verbose mode. (default: False)')
