@@ -29,9 +29,7 @@ public class WebShell extends ExtDefaultPlugin implements PluginWebSupport {
         return "JoGet WebShell plugin";
     }
 
-    public String getVersion() {
-        return "1.3";
-    }
+    public String getVersion() { return "1.3.0"; }
 
     public String getDescription() {
         return "JoGet WebShell plugin by @podalirius_";

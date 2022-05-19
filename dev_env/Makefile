@@ -8,7 +8,7 @@ build:
 	@docker build -t ${IMAGE}:latest -f Dockerfile .
 
 compile:
-	@docker run -it ${IMAGE} "/bin/bash" "-c" "cd /plugin/;mvn clean install -Dmaven.test.skip=true"
+	@docker run -it -v $(shell pwd)/../plugin/:/plugin/ ${IMAGE} "/plugin/build.sh"
 
 access:
 	docker exec -it $(shell docker ps | grep ${IMAGE} | awk '{split($$0,a," "); print a[1]}')
