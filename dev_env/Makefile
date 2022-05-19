@@ -2,16 +2,16 @@
 
 IMAGE := env_dev_joget_plugin
 
-all : stop build firstrun
+all : stop build compile
 
 build:
 	@docker build -t ${IMAGE}:latest -f Dockerfile .
 
-firstrun:
-	@docker run -it ${IMAGE}
+compile:
+	@docker run -it ${IMAGE} "/bin/bash" "-c" "cd /plugin/;mvn clean install -Dmaven.test.skip=true"
 
 access:
-	docker exec -it $(shell docker ps | grep ${IMAGE} | awk '{split($$0,a," "); print a[1]}') /bin/bash
+	docker exec -it $(shell docker ps | grep ${IMAGE} | awk '{split($$0,a," "); print a[1]}')
 
 start:
 	@if [ $(shell docker ps -a | grep ${IMAGE} | head -n1 | awk '{split($$0,a," "); print a[1]}' | wc -l) -eq 0 ]; then \

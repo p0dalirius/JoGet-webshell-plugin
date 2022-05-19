@@ -1,6 +1,6 @@
 FROM debian:buster
 
-ENV PLUGIN_VERSION="1.0.0"
+ENV PLUGIN_VERSION="1.2.0"
 ENV jogetDependencyVersion="7.0-SNAPSHOT"
 
 ENV DEBIAN_FRONTEND=noninteractive

